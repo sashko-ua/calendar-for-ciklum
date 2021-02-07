@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:active,
+*:focus {
+  outline: none;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #d6ffb38c;
+}
+
+.btn {
+  padding: 5px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  -webkit-box-shadow: 0 0 5px #333;
+          box-shadow: 0 0 5px #333;
+}
+
+.select {
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.selectBox {
+  position: relative;
+  min-width: 165px;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.checkboxes {
+  position: absolute;
+  display: none;
+  border: 1px #dadada solid;
+  background-color: #fff;
+  padding: 5px 15px;
+  width: 165px;
+}
+
+.checkboxes label {
+  display: block;
+}
+
+.checkboxes label:hover {
+  background-color: #99ccff;
+}
+
+.checkboxes--active {
+  display: block;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__btn {
+  width: 120px;
+  margin: 0 0 0 10px;
+}
+
+.calendar__inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(10, minmax(50px, auto));
+  border: .5px solid #000;
+  background-color: #f1f1f1;
+}
+
+.calendar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: .5px solid #000;
+  background-color: #cccccc;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calendar__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: .5px solid #000;
+  padding: 5px 10px;
+}
+
+.calendar__body--active {
+  background-color: #99ffd5;
+}
+
+.calendar__body--filtered {
+  background-color: #ffff83;
+}
+
+.calendar__body:hover .delete {
+  opacity: 1;
+}
+
+.calendar .delete {
+  position: absolute;
+  right: 5%;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: .2s all linear;
+  -o-transition: .2s all linear;
+  transition: .2s all linear;
+}
+
+.calendar .delete:hover {
+  color: red;
+  font-size: 18px;
+}
+
+.modal {
+  display: none;
+}
+
+.modal--active {
+  display: block;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffffc9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px #000;
+          box-shadow: 0 0 15px #000;
+  padding: 15px;
+}
+
+.modal__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.modal__btn {
+  margin: 0 15px;
+  padding: 10px 15px;
+}
+
+.create {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create__inner {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 0 15px #000;
+          box-shadow: 0 0 15px #000;
+  padding: 40px 25px;
+  background-color: #f1f1f1;
+}
+
+.create__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.create__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create__btns button {
+  margin: 0 15px;
+}
+
+.create__error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #d14545;
+  color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s all linear;
+  -o-transition: .2s all linear;
+  transition: .2s all linear;
+}
+
+.create__error--active {
+  height: 30px;
+  color: #000;
+}
